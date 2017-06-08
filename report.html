@@ -14006,15 +14006,15 @@ aU65Q9+0AAAAAElFTkSuQmCC
 <p>Coming to the concept of SVM, it relies on the fact that finding out the properties of that cardboard piece in the 3-dimensional cube is much easier than finding out the properties of that squiggly line in that 2-dimensional cardboard piece. So it just extracts the properties of that cardboard piece and projects it back to 2-dimensions. A simple plane in 3-dimensions will look like a squiggly line in 2-dimensions.</p>
 <p>That was a simple demonstrative example. To generalize it, SVM basically projects given data points onto really high dimensions (using kernel functions), get the separating hyperplane and convert it back to the lower dimensions. SVM defines that boundary using something called Support Vectors. They are the ones that are closest to the boundary and "support" the separation. The separating boundary will the optimal boundary (equidistant from both sets of points).</p>
 <p>Using knowledge about the data - for example, age, gender, family size, points (these are called features) we first plot them to establish relationships:</p>
-<p>&lt;img src = "images/svm1.png"&gt;</p>
+<p>&lt;img src = "svm1.png"&gt;</p>
 <p>For this drawing, the green dots are passed students, and the red ones are failed students. The SVM algorithm then draws a boundary to try and seperate the passed students from the failed students:</p>
-<p>&lt;img src = "images/svm2.png"&gt;</p>
+<p>&lt;img src = "svm2.png"&gt;</p>
 <p>We can see several plausable boundary lines here - but the objective of the SVM algorithm is to find the line with the maximum margin (solid line) and select that over a sub-optimal boundary (dashed lines). By maximising the margin, we make the model as 'safe' as possible from error i.e. reduce passed students being mixed with failed and vice versa.</p>
 <p>In reality, the data points are typically structured in much more complex ways, as with our student data. We have to consider several features at once, and the relationships aren't so linear anymore:</p>
-<p>&lt;img src = "images/svm3.png"&gt;</p>
+<p>&lt;img src = "svm3.png"&gt;</p>
 <p>Here we can clearly see a curve or some other complex structure is required to seperate the data. This means we have to do more than the basic SVM model and extend the functionality. We achieve this by using mathematical functions, called 'kernels'. What a kernel does is basically transform data points into a new dimension so that they can be seperable:</p>
-<p>&lt;img src = "images/svm4.png"&gt;</p>
-<p>&lt;img src = "images/svm5.jpeg"&gt;</p>
+<p>&lt;img src = "svm4.png"&gt;</p>
+<p>&lt;img src = "svm5.jpeg"&gt;</p>
 <p>Kernel Trick 1Kernel Trick 2
 Here, the green points in particular are focused on and shifted onto a seperate dimension. By then drawing a boundary across this dimension, the complex structure is now easily seperable by a linear boundary.
 Once the boundary has been established, the model can use it to predict whether a student is going to pass or fail, depending on what side of the boundary a new data point is on.</p>
